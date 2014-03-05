@@ -42,7 +42,7 @@ _END;
 function print_login_form(){
     echo <<<_END
       <form class="form-signin" method="post" action="index.php">
-        <h2 class="form-signin-heading">Bero</h2>
+        <h2 class="form-signin-heading">Accesso richiesto</h2>
         <input type="password" class="input-block-level" name="pwd" placeholder="Password">
         <button class="btn btn-large btn-primary" type="submit">Accedi</button>
       </form>

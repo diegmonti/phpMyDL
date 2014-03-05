@@ -25,7 +25,7 @@ _END;
 }
 
 echo <<<_END
-<h4 class=\"muted\">Bero</h4>
+<h4 class=\"muted\">File disponibili</h4>
 <table class="table table-hover">
 _END;
 $n_file = 0;

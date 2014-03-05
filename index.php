@@ -31,7 +31,7 @@ print_menu("Visualizza", 2, $mode);
 print_menu("Esci", 3, 0);
 echo <<<_END
         </ul>
-        <h3 class="muted">youtube-dl-tmpname</h3>
+        <h3 class="muted">phpMyDL</h3>
       </div>
 
       <hr>
