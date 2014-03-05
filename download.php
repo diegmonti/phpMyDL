@@ -40,7 +40,7 @@ _END;
                     $command = "youtube-dl -o ./download/video/%(title)s.%(ext)s -f 22".$url; //mp4 qualità alta
                     break;
                 case 4:
-                    $command = "youtube-dl ".$url." --extract-audio --audio-format mp3"; //mp3 solo audio
+                    $command = "youtube-dl -o ./download/audio/%(title)s.%(ext)s ".$url." --extract-audio --audio-format mp3"; //mp3 solo audio
                     break;
             }
             echo "<pre>";
