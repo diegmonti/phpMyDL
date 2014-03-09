@@ -34,6 +34,7 @@ if($handle = opendir('./download')) {
         if($entry != "." && $entry != "..") {
             $n_file++;
             printf("\n<tr><td>%s</td><td></td>", $entry);
+            printf("<td>%s</td>", human_filesize(filesize('./download/'.$entry)));
             printf("<td><a class=\"btn btn-primary\" href=\"download/%s\">Scarica</a></td>", $entry);
             printf("<td><a class=\"btn btn-danger\" href=\"index.php?mode=2&id=%s\">Cancella</a></td>", $entry);
             echo "</tr>";
@@ -44,6 +45,12 @@ if($handle = opendir('./download')) {
     }
 printf("\n</table>");
 closedir($handle);
+}
+
+function human_filesize($bytes, $decimals = 2) {
+  $sz = 'BKMGTP';
+  $factor = floor((strlen($bytes) - 1) / 3);
+  return sprintf("%.{$decimals}f", $bytes / pow(1024, $factor)) . @$sz[$factor];
 }
 
 ?>
