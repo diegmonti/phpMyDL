@@ -28,16 +28,16 @@ _END;
             // Tipo di conversione
             switch ($method) {
                 case 0:
-                    $command = "youtube-dl -o \"./download/%(title)s.%(ext)s\" -f 43 ".$url; //WebM qualità media
+                    $command = "youtube-dl -o \"./download/%(title)s.%(ext)s\" -f webm ".$url; //WebM qualità media
                     break;
                 case 1:
-                    $command = "youtube-dl -o \"./download/%(title)s.%(ext)s\" -f 17 ".$url; //3gp qualità minima
+                    $command = "youtube-dl -o \"./download/%(title)s.%(ext)s\" -f 3gp ".$url; //3gp qualità minima
                     break;
                 case 2:
-                    $command = "youtube-dl -o \"./download/%(title)s.%(ext)s\" -f 18 ".$url; //mp4 qualità media
+                    $command = "youtube-dl -o \"./download/%(title)s.%(ext)s\" -f worst ".$url; //mp4 qualità bassa
                     break;
                 case 3:
-                    $command = "youtube-dl -o \"./download/%(title)s.%(ext)s\" -f 22 ".$url; //mp4 qualità alta
+                    $command = "youtube-dl -o \"./download/%(title)s.%(ext)s\" -f best ".$url; //mp4 qualità alta
                     break;
                 case 4:
                     $command = "youtube-dl -o \"./download/%(title)s.%(ext)s\" ".$url." --extract-audio --audio-format mp3"; //mp3 solo audio
@@ -80,7 +80,7 @@ function print_form(){
         <select name="method" size="1">
             <option value="0">Video media qualità - WebM</option>
             <option value="1">Video bassa qualità - 3gp</option>
-            <option value="2">Video media qualità - mp4</option>
+            <option value="2">Video bassa qualità - mp4</option>
             <option value="3">Video alta qualità - mp4</option>
             <option value="4">Solo audio - mp3</option>
         </select>
