@@ -78,11 +78,7 @@ function print_form(){
     <label class="control-label">Impostazioni:</label>
     <div class="controls">
         <select name="method" size="1">
-            <option value="0">Video media qualità - WebM</option>
-            <option value="1">Video bassa qualità - 3gp</option>
-            <option value="2">Video bassa qualità - mp4</option>
-            <option value="3">Video alta qualità - mp4</option>
-            <option value="4">Solo audio - mp3</option>
+            <option value="0">TODO</option>
         </select>
           <span class="add-on">
             <i class="icon-refresh">
