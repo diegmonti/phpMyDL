@@ -26,7 +26,7 @@ _END;
   <div class="control-group">
     <label class="control-label">Indirizzo:</label>
     <div class="controls">
-      <input type="text" name="url" value="$url" readonly="true" />
+      <input class="span3" type="text" name="url" value="$url" readonly="true" />
           <span class="add-on">
             <i class="icon-play-circle">
             </i>
@@ -36,7 +36,7 @@ _END;
   <div class="control-group">
     <label class="control-label">Impostazioni:</label>
     <div class="controls">
-        <select name="method" size="1">
+        <select class="span3" name="method" size="1">
 _END;
                 format_list($url);
                 echo <<<_END
@@ -49,7 +49,7 @@ _END;
   </div>
 <input type="hidden" name="submitted" value="yes" />
 <div class="controls">
-  <button type="submit" class="btn btn-large btn-primary">Scarica</button>
+  <button type="submit" class="btn btn-large btn-primary">Vai!</button>
   <a class="btn btn-large" href="index.php?mode=1">Cancella</a>
 </div>
 </form>
@@ -85,20 +85,9 @@ function print_form(){
   <div class="control-group">
     <label class="control-label">Indirizzo:</label>
     <div class="controls">
-      <input type="text" name="url" value="" />
+      <input class="span3" type="text" name="url" value="" />
           <span class="add-on">
             <i class="icon-play-circle">
-            </i>
-          </span>
-    </div>
-  </div>
-  <div class="control-group">
-    <label class="control-label">Impostazioni:</label>
-    <div class="controls">
-        <select name="method" size="1">
-        </select>
-          <span class="add-on">
-            <i class="icon-refresh">
             </i>
           </span>
     </div>
@@ -116,6 +105,7 @@ function format_list($url){
     $command = "youtube-dl -j " . $url;
     $json = exec($command);
     $vett = json_decode($json, true);
+    printf("\n");
 
     foreach ($vett["formats"] as $k) {
         echo '<option value="';
@@ -123,7 +113,8 @@ function format_list($url){
         echo '">';
         echo $k["ext"];
         echo preg_replace("/.* -(.*)/", " - $1", $k["format"]);
-        echo '</option>\n';
+        echo '</option>';
+        printf("\n");
     }  
 }
 
