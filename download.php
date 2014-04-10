@@ -26,7 +26,7 @@ _END;
   <div class="control-group">
     <label class="control-label">Indirizzo:</label>
     <div class="controls">
-      <input class="span3" type="text" name="url" value="$url" readonly="true" />
+      <input class="span4" type="text" name="url" value="$url" readonly="true" />
           <span class="add-on">
             <i class="icon-play-circle">
             </i>
@@ -36,7 +36,7 @@ _END;
   <div class="control-group">
     <label class="control-label">Impostazioni:</label>
     <div class="controls">
-        <select class="span3" name="method" size="1">
+        <select class="span4" name="method" size="1">
 _END;
                 format_list($url);
                 echo <<<_END
@@ -49,7 +49,7 @@ _END;
   </div>
 <input type="hidden" name="submitted" value="yes" />
 <div class="controls">
-  <button type="submit" class="btn btn-large btn-primary">Vai!</button>
+  <button type="submit" class="btn btn-large btn-primary">Scarica</button>
   <a class="btn btn-large" href="index.php?mode=1">Cancella</a>
 </div>
 </form>
@@ -85,7 +85,7 @@ function print_form(){
   <div class="control-group">
     <label class="control-label">Indirizzo:</label>
     <div class="controls">
-      <input class="span3" type="text" name="url" value="" />
+      <input class="span4" type="text" name="url" value="" />
           <span class="add-on">
             <i class="icon-play-circle">
             </i>
