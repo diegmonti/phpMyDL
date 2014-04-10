@@ -56,7 +56,7 @@ _END;
 _END;
             } else {
                 //Scarica
-                $method_safe = (int)$method;
+                $method_safe = escapeshellarg($method);
                 $command = "youtube-dl -o \"./download/%(title)s.%(ext)s\" -f " . $method_safe . " " . $url;
                 echo "<pre>";
                 echo exec($command);
